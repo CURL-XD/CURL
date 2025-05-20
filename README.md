@@ -17,9 +17,9 @@
  
 ```bash
 cd $HOME
-rm -rf CURL-X
-git clone --depth=1 https://github.com/CURL-XD/CURL-X
-cd CURL-X
+rm -rf CURL
+git clone --depth=1 https://github.com/CURL-XD/CURL
+cd CURL
 python imax.py
 ```
 
