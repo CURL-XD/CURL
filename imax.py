@@ -14,7 +14,7 @@ if changes:
 os.system("chmod 777 *")
  
 if '64' in bit:
-    import imax
+    import sx
 else:
     os.system("clear")
     print("TOOL NOT AVAILABLE FOR 32 BIT DEVICE")
